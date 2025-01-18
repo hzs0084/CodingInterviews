@@ -1,0 +1,43 @@
+Question 1: Which option correctly and efficiently implementes the partitioning step of Quick Sort?
+
+Correct Answer:
+
+def partition(arr, low, high):
+    pivot = arr[high]
+    i = low - 1
+    for j in range(low, high):
+        if arr[j] < pivot:
+            i += 1
+            arr[i], arr[j] = arr[j], arr[i]
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    return i + 1
+
+Question 2: Which option correctly validates if a binary tree is a binary search tree?
+
+Correct Answer: 
+
+function isValidBST(node, lower=float('-inf'), upper=float('inf')):
+    if node is null:
+        return true
+    val = node.val
+    if val <= lower or val >= upper:
+        return false
+    return isValidBST(node.left, lower, val) and isValidBST(node.right, val, upper)
+
+Question 3: Class Hierarchy Design
+
+A developer is designing a system for a zoo that includes different types of animals. The system has a base class 'Animal' with subclasses 'Mammal', 'Bird', and 'Reptile'. What is the best way to implement common behavior among the subclasses?
+
+Correct Answer: Create an abstract method in the 'Animal' class that must be implemented by each subclass.
+
+Question 4: Encapsulation in Java
+
+A financial application requires sensistive data, such as account balances, to be accessed securely. Which of the following approaches best implementes Encapsulation
+
+Correct Answer: Declare the balance field as private and provide public getter and setter methods.
+
+Question 5: Polymorphism application
+
+In a graphics application, a method 'drawShape(Shape s)' accepts different shapes like 'Circle', 'Rectangle', and 'Triangle'. Which implementation demonstrates the best use of polymorphism?
+
+Correct Answer: implement a 'draw()' method in each shape class and call it from 'drawShape(Shape S)'

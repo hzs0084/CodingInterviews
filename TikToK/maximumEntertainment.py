@@ -1,3 +1,23 @@
+'''
+In the TikTok feed, there are n videos available for a user to watch, each with a specific entertainment score. The user can choose three videos to watch in a sequence, 
+With the option to rewatch a particular video twice or even thrice.
+
+Specifically, the user will select three indices i,j,k such that 0 <= i < j < k < n, where i, j, k represent the indices of the videos chosen. The user can select videos in the following ways:
+
+- Watch the same video three times (i.e., i = j = k).
+- Watch the same video twice and a different one once (i = j < k or i<j= k).
+- Watch three different videos (i < j < k).
+
+Each video has an entertainment score represented as an array entertainment of integers. The user's total enjoyment for watching the selected videos is calucluated as follows:
+- The enjoyment from the first vidfeo is entertainment[i].
+- The enjoyment from the second video is multiplied by a factor r. contributing r * entertainment[j].
+- The enjoyment from the third video is multiplied by a factor r^2, contributing r^2 * entertainment[k].
+
+Given the array entertainment and the integer r, your task is to determine the maximum possible enterntainment score the user can achieve by selecting the videos optimallly selecting indices i,j,k.
+
+
+'''
+
 def maximumEntertainment(entertainment, r):
     n = len(entertainment)
     

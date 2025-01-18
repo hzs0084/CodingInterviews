@@ -1,4 +1,33 @@
-#!/bin/python3
+'''
+TikTok Server Network Optimization
+
+TikTok is growing, and the developers need more servers to keep up with all the new users. 
+They have installed n serv ers across different locations, and each server is palced ona  large frid. the ith server is located at the point (x[i], y[i]) on the grid.
+
+The cost of conneting two servers, i and j, is the smaller of the two differences:
+    - The difference in the x-coordinates, |x[i] - x[j]|.
+    - The difference in the y-coordinates, |y[i] - y[j]|.
+
+Here, |a| means the absolute value of the number a (ignoring any negative signs).
+
+Your task is to find the minimum cost to build a network where all the servers can communicate with each other, either directly or through other servers.
+
+Example:
+
+n = 3
+x = [2,4,8]
+y = [6,10,9]
+
+To connect the servers, here's the strategy:
+
+1. Connect the first and second servers: The servers are at (2,6) and (4,10). The cost is min(|2-4|, |6-10|) = 2.
+
+2. Connect the second and third servers: The servers are at (4,10) and (8,9). The cost is min(|4-8|, |10-9|) = 1.
+
+3. Connect the first and third servers: The servers are at (2,6) and (8,9). The cost is min(|2-8|, |6-9|) = 3.
+
+So, the optimal way is to connet the first and second servers for 2, and then the second and third servers for 1. Thus, the total minimum cost is 2 + 1 = 3.
+'''
 
 import math
 import os
