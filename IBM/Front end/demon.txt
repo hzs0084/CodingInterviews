@@ -1,0 +1,39 @@
+The form contains 8 input fields and a submit button.
+
++ Elements should have a 10px margin between them.
+
+« For the desktop layout (screen width 2768p):
+© "First name", "Last name" and "Age" fields should be positioned
+on the first row and have equal widths.
+
+© The "Address" field should be positioned on the second row and
+take the width of the form.
+
+© The "Place of work" and "Job title" fields should be positioned on
+the third row and have equal widths.
+
+© The "Phone number" and "skype" fields should be positioned on
+the fourth row with equal widths.
+
+© The button should be positioned on the last row and take the
+width of the form.
+
+«For the mobile layout (screen width <768px):
+© Allfields should take the width of the form.
+
+«Elements should not have a position: absolute attribute.
+
+The markup for the question is provided. Complete the
+src/css/style.css file to implement the required features.
+
+Read-only files
+
+test/*
+
+« sr/indexjs
+
+« sr/index.html
+
+« src/cssireadonly.css
+
+© appis
